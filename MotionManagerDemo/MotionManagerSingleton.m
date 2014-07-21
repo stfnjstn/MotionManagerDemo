@@ -9,7 +9,7 @@
 #import "MotionManagerSingleton.h"
 
 // Damping factor
-#define cLowPassFacor 0.95
+#define cLowPassFactor 0.95
 
 @implementation MotionManagerSingleton
 
@@ -48,7 +48,7 @@ static bool bActive;
     return [self lowPassWithVector: GLKVector3Make(attitude.yaw,attitude.roll,attitude.pitch)];
 }
 
-// Stop collection motion data to save energy
+// Stop collecting motion data to save energy
 +(void)stop {
     if (_motionManager!=nil) {
         [_motionManager stopDeviceMotionUpdates];
@@ -67,9 +67,9 @@ static bool bActive;
 {
     static GLKVector3 lastVector;
     
-    vector.x = vector.x * cLowPassFacor + lastVector.x * (1.0 - cLowPassFacor);
-    vector.y = vector.y * cLowPassFacor + lastVector.y * (1.0 - cLowPassFacor);
-    vector.z = vector.z * cLowPassFacor + lastVector.z * (1.0 - cLowPassFacor);
+    vector.x = vector.x * cLowPassFactor + lastVector.x * (1.0 - cLowPassFactor);
+    vector.y = vector.y * cLowPassFactor + lastVector.y * (1.0 - cLowPassFactor);
+    vector.z = vector.z * cLowPassFactor + lastVector.z * (1.0 - cLowPassFactor);
     
     lastVector = vector;
     return vector;

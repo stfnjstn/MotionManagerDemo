@@ -9,6 +9,7 @@
 #import "MyScene.h"
 #import "MotionManagerSingleton.h"
 #import <GLKit/GLKit.h>
+#import <MotionManagerDemo-Swift.h>
 
 @implementation MyScene
 
@@ -61,12 +62,21 @@ NSTimeInterval _dt;
         _dt = 0;
     }
     _lastUpdateTime = currentTime;
+   
+    SKSpriteNode *sprite;
     
     GLKVector3 motionVector = [MotionManagerSingleton getMotionVectorWithLowPass];
-    SKSpriteNode *sprite;
+   
     for (int i=0; i<self.children.count;i++) {
         sprite=[self.children objectAtIndex:i];
         sprite.position = CGPointMake(sprite.position.x + _dt * motionVector.x*100, sprite.position.y);
+    }
+    
+    NSArray *motionArray  = [MotionManagerSingletonSwift getMotionVectorWithLowPass];
+    
+    for (int i=0; i<self.children.count;i++) {
+        sprite=[self.children objectAtIndex:i];
+        sprite.position = CGPointMake(sprite.position.x + _dt * ((NSNumber *)[motionArray objectAtIndex:0]).floatValue * 100, sprite.position.y);
     }
     
 }

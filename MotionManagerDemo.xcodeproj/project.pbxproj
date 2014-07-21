@@ -28,6 +28,7 @@
 		2C6DE096196BF6E600E53191 /* MotionManagerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6DE095196BF6E600E53191 /* MotionManagerSingleton.m */; };
 		2C6DE098196BF78D00E53191 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DE097196BF78D00E53191 /* CoreMotion.framework */; };
 		2C6DE09A196BF7AD00E53191 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DE099196BF7AD00E53191 /* GLKit.framework */; };
+		2C958C851975BC4700E8BBA9 /* MotionManagerSingletonSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C958C841975BC4700E8BBA9 /* MotionManagerSingletonSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		2C6DE095196BF6E600E53191 /* MotionManagerSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionManagerSingleton.m; sourceTree = "<group>"; };
 		2C6DE097196BF78D00E53191 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		2C6DE099196BF7AD00E53191 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		2C958C831975BC4600E8BBA9 /* MotionManagerDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MotionManagerDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C958C841975BC4700E8BBA9 /* MotionManagerSingletonSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManagerSingletonSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,7 @@
 				2C6DE06C196BF6A600E53191 /* Main_iPad.storyboard */,
 				2C6DE094196BF6E600E53191 /* MotionManagerSingleton.h */,
 				2C6DE095196BF6E600E53191 /* MotionManagerSingleton.m */,
+				2C958C841975BC4700E8BBA9 /* MotionManagerSingletonSwift.swift */,
 				2C6DE06F196BF6A600E53191 /* ViewController.h */,
 				2C6DE070196BF6A600E53191 /* ViewController.m */,
 				2C6DE072196BF6A600E53191 /* MyScene.h */,
@@ -147,6 +151,7 @@
 				2C6DE075196BF6A600E53191 /* Spaceship.png */,
 				2C6DE077196BF6A600E53191 /* Images.xcassets */,
 				2C6DE05E196BF6A600E53191 /* Supporting Files */,
+				2C958C831975BC4600E8BBA9 /* MotionManagerDemo-Bridging-Header.h */,
 			);
 			path = MotionManagerDemo;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C6DE074196BF6A600E53191 /* MyScene.m in Sources */,
+				2C958C851975BC4700E8BBA9 /* MotionManagerSingletonSwift.swift in Sources */,
 				2C6DE071196BF6A600E53191 /* ViewController.m in Sources */,
 				2C6DE068196BF6A600E53191 /* AppDelegate.m in Sources */,
 				2C6DE096196BF6E600E53191 /* MotionManagerSingleton.m in Sources */,
@@ -418,11 +424,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MotionManagerDemo/MotionManagerDemo-Prefix.pch";
 				INFOPLIST_FILE = "MotionManagerDemo/MotionManagerDemo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MotionManagerDemo/MotionManagerDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -432,11 +442,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MotionManagerDemo/MotionManagerDemo-Prefix.pch";
 				INFOPLIST_FILE = "MotionManagerDemo/MotionManagerDemo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MotionManagerDemo/MotionManagerDemo-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
