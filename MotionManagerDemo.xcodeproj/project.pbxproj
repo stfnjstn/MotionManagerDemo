@@ -29,6 +29,8 @@
 		2C6DE098196BF78D00E53191 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DE097196BF78D00E53191 /* CoreMotion.framework */; };
 		2C6DE09A196BF7AD00E53191 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DE099196BF7AD00E53191 /* GLKit.framework */; };
 		2C958C851975BC4700E8BBA9 /* MotionManagerSingletonSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C958C841975BC4700E8BBA9 /* MotionManagerSingletonSwift.swift */; };
+		2CEEA573197DB3C500E7BA8A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2CEEA572197DB3C500E7BA8A /* README.md */; };
+		2CEEA575197DB3E200E7BA8A /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2CEEA574197DB3E200E7BA8A /* License.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		2C6DE099196BF7AD00E53191 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		2C958C831975BC4600E8BBA9 /* MotionManagerDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MotionManagerDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C958C841975BC4700E8BBA9 /* MotionManagerSingletonSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManagerSingletonSwift.swift; sourceTree = "<group>"; };
+		2CEEA572197DB3C500E7BA8A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2CEEA574197DB3E200E7BA8A /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.txt; path = MotionManagerDemo/License.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 		2C6DE049196BF6A500E53191 = {
 			isa = PBXGroup;
 			children = (
+				2CEEA572197DB3C500E7BA8A /* README.md */,
+				2CEEA574197DB3E200E7BA8A /* License.txt */,
 				2C6DE05D196BF6A600E53191 /* MotionManagerDemo */,
 				2C6DE084196BF6A600E53191 /* MotionManagerDemoTests */,
 				2C6DE054196BF6A500E53191 /* Frameworks */,
@@ -263,6 +269,7 @@
 			files = (
 				2C6DE076196BF6A600E53191 /* Spaceship.png in Resources */,
 				2C6DE078196BF6A600E53191 /* Images.xcassets in Resources */,
+				2CEEA575197DB3E200E7BA8A /* License.txt in Resources */,
 				2C6DE06E196BF6A600E53191 /* Main_iPad.storyboard in Resources */,
 				2C6DE06B196BF6A600E53191 /* Main_iPhone.storyboard in Resources */,
 				2C6DE062196BF6A600E53191 /* InfoPlist.strings in Resources */,
@@ -287,6 +294,7 @@
 				2C6DE074196BF6A600E53191 /* MyScene.m in Sources */,
 				2C958C851975BC4700E8BBA9 /* MotionManagerSingletonSwift.swift in Sources */,
 				2C6DE071196BF6A600E53191 /* ViewController.m in Sources */,
+				2CEEA573197DB3C500E7BA8A /* README.md in Sources */,
 				2C6DE068196BF6A600E53191 /* AppDelegate.m in Sources */,
 				2C6DE096196BF6E600E53191 /* MotionManagerSingleton.m in Sources */,
 				2C6DE064196BF6A600E53191 /* main.m in Sources */,
