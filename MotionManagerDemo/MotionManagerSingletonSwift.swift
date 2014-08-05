@@ -20,7 +20,7 @@ class MotionManagerSingletonSwift: NSObject {
     var lastVector:[Float] = [0.0, 0.0, 0.0]
 
     
-    init()  {
+    override init()  {
         motionManager=CMMotionManager()
         motionManager.deviceMotionUpdateInterval = 0.25
         motionManager.startDeviceMotionUpdates()
@@ -57,12 +57,12 @@ class MotionManagerSingletonSwift: NSObject {
             dispatch_after(250, dispatch_get_main_queue(), {
                 MotionManagerSingletonSwift.calibrate()
                 })
-        } else if attitude {
+        } else if attitude != nil {
             // Use start orientation to calibrate
             attitude!.multiplyByInverseOfAttitude(sharedInstance.referenceAttitude)
         }
         
-        if attitude {
+        if attitude != nil {
             return lowPassWithVector([Float(attitude!.yaw), Float(attitude!.roll), Float(attitude!.pitch)])
         } else {
             return [0.0, 0.0, 0.0]
