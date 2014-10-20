@@ -8,7 +8,7 @@ This sample code contains two versions of the MotionManager component. One is wr
 The MyScene file
 contains code which demonstrates how to use it.
 
-Prerequisite is XCode 6 (Beta 5 or newer)
+Prerequisite is XCode 6. Currently this code does not run in XCode 6.1
 
 
 A detailed description can be found in my Blog:
