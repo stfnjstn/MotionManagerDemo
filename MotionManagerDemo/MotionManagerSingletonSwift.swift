@@ -50,7 +50,7 @@ class MotionManagerSingletonSwift: NSObject {
     // for multiple device positions
     class func getMotionVectorWithLowPass() -> [Float] {
         // Motion
-        var attitude: CMAttitude? = getMotionManager().deviceMotion?.attitude?;
+        var attitude: CMAttitude? = getMotionManager().deviceMotion?.attitude
         
         if sharedInstance.referenceAttitude==nil {
             // Cache Start Orientation to calibrate the device. Wait for a short time to give MotionManager enough time to initialize

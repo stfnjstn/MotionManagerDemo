@@ -13,8 +13,8 @@ Prerequisite is XCode 6.1
 
 A detailed description can be found in my Blog:
 -----------------------------------------------
-http://stefansdevplayground.blogspot.de/2014/04/howto-use-device-motion-sensors-to.html
-http://stefansdevplayground.blogspot.de/2014/07/how-to-convertintegrate-swift-with.html
+ObjectiveC: http://developerplayground.net/?p=25
+SWIFT:      http://developerplayground.net/?p=19
 
 A video is available here: https://www.youtube.com/watch?v=EZGBCia9XJM
 
