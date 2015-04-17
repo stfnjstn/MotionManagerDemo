@@ -28,6 +28,8 @@
 		2C6DE096196BF6E600E53191 /* MotionManagerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6DE095196BF6E600E53191 /* MotionManagerSingleton.m */; };
 		2C6DE098196BF78D00E53191 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DE097196BF78D00E53191 /* CoreMotion.framework */; };
 		2C6DE09A196BF7AD00E53191 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DE099196BF7AD00E53191 /* GLKit.framework */; };
+		2C7888591AE1ABA60044BA5A /* MotionManagerDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C7888581AE1ABA60044BA5A /* MotionManagerDemo-Info.plist */; };
+		2C78885B1AE1ABBC0044BA5A /* MotionManagerDemoTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C78885A1AE1ABBC0044BA5A /* MotionManagerDemoTests-Info.plist */; };
 		2C958C851975BC4700E8BBA9 /* MotionManagerSingletonSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C958C841975BC4700E8BBA9 /* MotionManagerSingletonSwift.swift */; };
 		2CEEA573197DB3C500E7BA8A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2CEEA572197DB3C500E7BA8A /* README.md */; };
 		2CEEA575197DB3E200E7BA8A /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2CEEA574197DB3E200E7BA8A /* License.txt */; };
@@ -49,7 +51,6 @@
 		2C6DE057196BF6A500E53191 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2C6DE059196BF6A500E53191 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2C6DE05B196BF6A600E53191 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		2C6DE05F196BF6A600E53191 /* MotionManagerDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MotionManagerDemo-Info.plist"; sourceTree = "<group>"; };
 		2C6DE061196BF6A600E53191 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C6DE063196BF6A600E53191 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C6DE065196BF6A600E53191 /* MotionManagerDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MotionManagerDemo-Prefix.pch"; sourceTree = "<group>"; };
@@ -65,13 +66,14 @@
 		2C6DE077196BF6A600E53191 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C6DE07D196BF6A600E53191 /* MotionManagerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotionManagerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6DE07E196BF6A600E53191 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		2C6DE086196BF6A600E53191 /* MotionManagerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MotionManagerDemoTests-Info.plist"; sourceTree = "<group>"; };
 		2C6DE088196BF6A600E53191 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C6DE08A196BF6A600E53191 /* MotionManagerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionManagerDemoTests.m; sourceTree = "<group>"; };
 		2C6DE094196BF6E600E53191 /* MotionManagerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionManagerSingleton.h; sourceTree = "<group>"; };
 		2C6DE095196BF6E600E53191 /* MotionManagerSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionManagerSingleton.m; sourceTree = "<group>"; };
 		2C6DE097196BF78D00E53191 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		2C6DE099196BF7AD00E53191 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		2C7888581AE1ABA60044BA5A /* MotionManagerDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MotionManagerDemo-Info.plist"; path = "../../../MotionManagerDemoBeforeSwift/MotionManagerDemo/MotionManagerDemo/MotionManagerDemo-Info.plist"; sourceTree = "<group>"; };
+		2C78885A1AE1ABBC0044BA5A /* MotionManagerDemoTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MotionManagerDemoTests-Info.plist"; sourceTree = "<group>"; };
 		2C958C831975BC4600E8BBA9 /* MotionManagerDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MotionManagerDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C958C841975BC4700E8BBA9 /* MotionManagerSingletonSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManagerSingletonSwift.swift; sourceTree = "<group>"; };
 		2CEEA572197DB3C500E7BA8A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -165,8 +167,8 @@
 		2C6DE05E196BF6A600E53191 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2C6DE05F196BF6A600E53191 /* MotionManagerDemo-Info.plist */,
 				2C6DE060196BF6A600E53191 /* InfoPlist.strings */,
+				2C7888581AE1ABA60044BA5A /* MotionManagerDemo-Info.plist */,
 				2C6DE063196BF6A600E53191 /* main.m */,
 				2C6DE065196BF6A600E53191 /* MotionManagerDemo-Prefix.pch */,
 			);
@@ -185,7 +187,7 @@
 		2C6DE085196BF6A600E53191 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2C6DE086196BF6A600E53191 /* MotionManagerDemoTests-Info.plist */,
+				2C78885A1AE1ABBC0044BA5A /* MotionManagerDemoTests-Info.plist */,
 				2C6DE087196BF6A600E53191 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -268,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C6DE076196BF6A600E53191 /* Spaceship.png in Resources */,
+				2C7888591AE1ABA60044BA5A /* MotionManagerDemo-Info.plist in Resources */,
 				2C6DE078196BF6A600E53191 /* Images.xcassets in Resources */,
 				2CEEA575197DB3E200E7BA8A /* License.txt in Resources */,
 				2C6DE06E196BF6A600E53191 /* Main_iPad.storyboard in Resources */,
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C6DE089196BF6A600E53191 /* InfoPlist.strings in Resources */,
+				2C78885B1AE1ABBC0044BA5A /* MotionManagerDemoTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
