@@ -1,3 +1,4 @@
+
 //
 //  MotionManagerSingletonSwift.swift
 //  MotionManagerDemo
@@ -13,12 +14,12 @@ import CoreMotion
 let cLowPassFactor: Float = 0.95
 
 class MotionManagerSingletonSwift: NSObject {
-   
+    
     var motionManager: CMMotionManager
     var referenceAttitude:CMAttitude?=nil
     var bActive = false
     var lastVector:[Float] = [0.0, 0.0, 0.0]
-
+    
     
     override init()  {
         motionManager=CMMotionManager()
@@ -26,12 +27,12 @@ class MotionManagerSingletonSwift: NSObject {
         motionManager.startDeviceMotionUpdates()
         bActive=true;
     }
-
+    
     // only one instance of CMMotionManager can be used in your project.
     // => Implement as Singleton which can be used in the whole application
     class var sharedInstance: MotionManagerSingletonSwift {
-    struct Singleton {
-        static let instance = MotionManagerSingletonSwift()
+        struct Singleton {
+            static let instance = MotionManagerSingletonSwift()
         }
         return Singleton.instance
     }
@@ -44,22 +45,22 @@ class MotionManagerSingletonSwift: NSObject {
         }
         return sharedInstance.motionManager
     }
-
+    
     // Returns an array with the movements
     // At the first time a reference orientation is saved to ensure the motion detection works
     // for multiple device positions
     class func getMotionVectorWithLowPass() -> [Float] {
         // Motion
-        var attitude: CMAttitude? = getMotionManager().deviceMotion?.attitude
+        let attitude: CMAttitude? = getMotionManager().deviceMotion?.attitude
         
         if sharedInstance.referenceAttitude==nil {
             // Cache Start Orientation to calibrate the device. Wait for a short time to give MotionManager enough time to initialize
             dispatch_after(250, dispatch_get_main_queue(), {
                 MotionManagerSingletonSwift.calibrate()
-                })
+            })
         } else if attitude != nil {
             // Use start orientation to calibrate
-            attitude!.multiplyByInverseOfAttitude(sharedInstance.referenceAttitude)
+            attitude!.multiplyByInverseOfAttitude(sharedInstance.referenceAttitude!)
         }
         
         if attitude != nil {
@@ -68,7 +69,7 @@ class MotionManagerSingletonSwift: NSObject {
             return [0.0, 0.0, 0.0]
         }
     }
-
+    
     // Stop collection motion data to save energy
     class func stop() {
         sharedInstance.motionManager.stopDeviceMotionUpdates()
@@ -78,7 +79,7 @@ class MotionManagerSingletonSwift: NSObject {
     
     // Calibrate motion manager with a ne reference attitude
     class func calibrate() {
-        sharedInstance.referenceAttitude = getMotionManager().deviceMotion?.attitude?.copy() as? CMAttitude
+        sharedInstance.referenceAttitude = getMotionManager().deviceMotion?.attitude.copy() as? CMAttitude
     }
     
     
